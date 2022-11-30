@@ -11,6 +11,15 @@ public class Circle extends Shape{
         this.Radius = Math.abs(radius);
     }
 
+    //Getters & setters
+    public int getRadius(){
+        return this.Radius;
+    }
+
+    public void setRadius(int radius){
+        this.Radius = radius;
+    }
+
     protected String Type() {
         return "Circle";
     }

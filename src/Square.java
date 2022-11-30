@@ -12,6 +12,24 @@ public class Square extends Shape {
         this.Width = Math.abs(width);
         this.Height = Math.abs(height);
     }
+
+    //Getters & setters
+    public int getWidth(){
+        return this.Width;
+    }
+
+    public void setWidth(int width){
+        this.Width = Math.abs(width);
+    }
+
+    public int getHeight(){
+        return this.Height;
+    }
+
+    public void setHeight(int height){
+        this.Height = height;
+    }
+
     protected String Type() {
         return "Square";
     }
