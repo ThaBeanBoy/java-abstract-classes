@@ -9,11 +9,17 @@ public class Square extends Shape {
         super(x, y);
 
         //Setting the square's properties
-        this.Width = width;
-        this.Height = height;
+        this.Width = Math.abs(width);
+        this.Height = Math.abs(height);
     }
     protected String Type() {
         return "Square";
+    }
+
+    public String Details(){
+        return super.Details() + "\n" +
+                "Width  : " + this.Width + endl() +
+                "Height : " + this.Height + endl();
     }
 
     public double Area() {

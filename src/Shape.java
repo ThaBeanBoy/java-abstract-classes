@@ -14,8 +14,10 @@ public abstract class Shape {
 
     public abstract double Area();
     public String Details(){
-        return "Shape type : " +
-                Type();
+        return "Shape type : " + Type() + endl() +
+                "x    : " + this.x + "px" + endl() +
+                "y    : " + this.y + "px" + endl() +
+                "Area : " + this.Area() + "px^2";
     }
 
     //Getters & setters
@@ -33,5 +35,18 @@ public abstract class Shape {
 
     public void setY(int y){
         this.y = y;
+    }
+
+    //Utility function
+    protected String endl(){
+        return "\n";
+    }
+
+    protected  String endl(int breaks){
+        String out = "";
+        for(int i=0; i<breaks; i++)
+            out += endl();
+
+        return out;
     }
 }
